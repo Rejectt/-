@@ -1799,7 +1799,7 @@ client.on('message', msg => {
 });
 
 
-ient.on('message', message => {
+cient.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
     if (message.content.startsWith(prefix + 'ss')) {
       if (!devs.includes(message.author.id)) return message.channel.send("<@515952323730735135> only this guy can do restart the bot so don't try again :wink:.");
@@ -1813,7 +1813,7 @@ ient.on('message', message => {
         client.user.setActivity(argresult,{type: 'l'});
 
       } else if(message.content.startsWith(prefix + 'sp')) {
-        client.user.setActivity(argresult,{type: 'p'});
+        client.user.setActivity(argresult,{type: 'PLAYING'});
 
       } else if(message.content.startsWith(prefix + 'sn')) {
         client.user.setUsername(argresult);
