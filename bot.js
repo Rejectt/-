@@ -1344,8 +1344,9 @@ client.on('message', message => {
 });
 
 //
+
       client.on('message', message => {
-        if(message.content === "info") {
+        if(message.content === "!info") {
             const embed = new Discord.RichEmbed()
             .setColor("#00FFFF")
       .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
