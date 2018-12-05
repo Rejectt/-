@@ -1798,10 +1798,11 @@ client.on('message', msg => {
   }
 });
 
+    const devs = ['515952323730735135'];
 
-cient.on('message', message => {
+client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
-    if (message.content.startsWith(prefix + 'ss')) {
+    if (message.content.startsWith(prefix + 'setStreaming')) {
       if (!devs.includes(message.author.id)) return message.channel.send("<@515952323730735135> only this guy can do restart the bot so don't try again :wink:.");
       message.delete();
       client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
@@ -1810,7 +1811,7 @@ cient.on('message', message => {
         client.user.setActivity(argresult,{type: 'WATCHING'});
 
       } else if(message.content.startsWith(prefix + 'sl')) {
-        client.user.setActivity(argresult,{type: 'l'});
+        client.user.setActivity(argresult,{type: 'LISTENING'});
 
       } else if(message.content.startsWith(prefix + 'sp')) {
         client.user.setActivity(argresult,{type: 'PLAYING'});
@@ -1822,7 +1823,7 @@ cient.on('message', message => {
         client.user.setAvatar(argresult);
 
 
-      } else if(message.content.startsWith(prefix + 'setStatus')) {
+      } else if(message.content.startsWith(prefix + 'ss')) {
         if(!argresult) return message.channel.send('`online`, `DND(Do not Distrub),` `idle`, `invisible(Offline)` :notes: أختر أحد الحالات');
         client.user.setStatus(argresult);
 
@@ -1830,7 +1831,6 @@ cient.on('message', message => {
     }
 
   });
-
 
 
 
