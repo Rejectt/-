@@ -1799,27 +1799,6 @@ client.on('message', msg => {
 });
 
 
-const adminprefix = "r-";
-const devs = ['515952323730735135'];
-client.on('message', message => {
-  var argresult = message.content.split(` `).slice(1).join(' ');
-    if (!devs.includes(message.author.id)) return;
-if (message.content.startsWith(adminprefix + 'st')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk")
-    message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(5000)})
-}
-});
-
-
-
-
-
-
-
-
-
-
-
 
 
 
