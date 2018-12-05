@@ -1675,7 +1675,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("Multi Bot Prefix ='!' -Welcome in the Support Server",{type: 'WATCHING'})
+     client.user.setActivity("Multi Bot Prefix ='!' -Welcome in the Support Server",{type: 'Streaming'})
 
 });
 
