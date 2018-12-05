@@ -380,6 +380,9 @@ client.on("message", message => {
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
 
 👑『اوامر ادارية』👑
+👑!t1 [Name] 『لـ انشاء روم صوتي』
+
+👑!t2 [Name] 『لـ انشاء كتابي』
 
 👑!rooms 『لمعرفه عدد رومات السيرفر』
 
@@ -732,7 +735,7 @@ client.on('message',async message => {
 
 
        client.on("message", function(message) {
-       	var prefix = "$";
+       	var prefix = "!";
           if(message.content.startsWith(prefix + "rps")) {
            let messageArgs = message.content.split(" ").slice(1).join(" ");
            let messageRPS = message.content.split(" ").slice(2).join(" ");
