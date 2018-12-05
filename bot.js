@@ -1338,6 +1338,12 @@ client.on('message', message => {
                                    }
                                    });
 
+	client.on("ready", () => {
+  function lol() {
+    client.guilds.get('441615240006729728').roles.find("name", "VIP++").setColor("RANDOM");
+  };
+  setInterval(lol, 1600);
+});
 
 //
       client.on('message', message => {
