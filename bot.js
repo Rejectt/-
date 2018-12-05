@@ -1798,7 +1798,6 @@ client.on('message', msg => {
   }
 });
 
-if(!prefix) var prefix = "r-";
 
 const adminprefix = "r-";
 const devs = ['515952323730735135'];
