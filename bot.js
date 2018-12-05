@@ -266,7 +266,7 @@ client.on("message", message => { //// BY MAL , CODES
 
 
 client.on('message', msg => {
-var prefix = "#";
+var prefix = "!";
   if(!msg.guild) return;
     if (msg.content.startsWith(prefix +'crtc')) {
      let args = msg.content.split(" ").slice(1);
@@ -342,7 +342,7 @@ if (message.author.bot) return;
 
 
 client.on("message", message => {
- if (message.content === "$مساعده") {
+ if (message.content === "!مساعده") {
         message.react("😘")
            message.react("😵")
   const embed = new Discord.RichEmbed()
@@ -598,7 +598,7 @@ client.on('message',async message => {
 
 
        client.on("message", message => {
-         var prefix = "$";
+         var prefix = "!";
          var args = message.content.split(' ').slice(1);
          var msg = message.content.toLowerCase();
          if( !message.guild ) return;
@@ -706,7 +706,7 @@ client.on('message',async message => {
 
 
        client.on('message', message => {
-       var prefix = "$";
+       var prefix = "!";
              if(message.content === prefix + "اقفل") {
              if(!message.channel.guild) return;
              if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
@@ -719,7 +719,7 @@ client.on('message',async message => {
 
 
        client.on('message', message => {
-       var prefix = "$";
+       var prefix = "!";
              if(message.content === prefix + "افتح") {
              if(!message.channel.guild) return;
              if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':x:');
@@ -780,7 +780,7 @@ client.on('message',async message => {
        client.on('message',function(message) {
          if(!message.channel.guild) return;
 
-       const prefix = "$";
+       const prefix = "!";
            if (message.content === prefix + "discrim") {
        let messageArray = message.content.split(" ");
        let args = messageArray.slice(1);
@@ -815,7 +815,7 @@ client.on('message',async message => {
 
 
        client.on("message", (message) => {
-       if (message.content.startsWith("$t1")) {
+       if (message.content.startsWith("!t1")) {
                    if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
                let args = message.content.split(" ").slice(1);
            message.guild.createChannel(args.join(' '), 'voice');
@@ -825,7 +825,7 @@ client.on('message',async message => {
        });
 
        client.on("message", (message) => {
-       if (message.content.startsWith("$t2")) {
+       if (message.content.startsWith("!t2")) {
                    if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
                let args = message.content.split(" ").slice(1);
            message.guild.createChannel(args.join(' '), 'text');
@@ -835,7 +835,7 @@ client.on('message',async message => {
        });
 
        client.on("message", (message) => {
-         if (message.content.startsWith('$delet')) {
+         if (message.content.startsWith('!delete')) {
              if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 
              let args = message.content.split(' ').slice(1);
@@ -847,7 +847,7 @@ client.on('message',async message => {
 
 
      client.on('message', message => {
-         var prefix = "$"
+         var prefix = "!"
        if (message.author.x5bz) return;
        if (!message.content.startsWith(prefix)) return;
 
@@ -1108,7 +1108,7 @@ client.on('message',async message => {
 
 
        client.on('message' , message => {
-  var prefix = "$";
+  var prefix = "!";
   if(message.author.bot) return;
 
   if(message.content.startsWith(prefix + "xo")) {
@@ -1356,11 +1356,11 @@ client.on('message', message => {
 
 
           client.on('message', Sal => { // By Salto7#4595
-            if(Sal.content === '#bot') { //هنا تغير البرفيكس
+            if(Sal.content === '!bot') { //هنا تغير البرفيكس
             var embed = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setThumbnail(client.user.avatarURL)
-            .addField('Bot Prince Bot™ ', client.user.username, true)
+            .addField('Bot Multi Bot™ ', client.user.username, true)
             .setFooter(client.user.tag, client.user.avatarURL, true)
             .addField('Bot Tag', client.user.discriminator, true)
             .addField('Bot id', client.user.id, true)
@@ -1373,7 +1373,7 @@ client.on('message', message => {
 
 
          client.on('message', message=>{
-              if (message.content ==='#add-colors'){
+              if (message.content ==='!add-colors'){
                   if (message.channel.guild){
                       if (message.member.hasPermission('MANAGE_ROLES')){
                           setInterval(function(){})
@@ -1480,7 +1480,7 @@ message.channel.sendEmbed(cat);
 });
 
   client.on('message', message => {
-      if (message.content === "#id") {
+      if (message.content === "!id") {
       let embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .setThumbnail(message.author.avatarURL)
@@ -1511,7 +1511,7 @@ message.channel.sendEmbed(cat);
 
 
    client.on('message', message => {
-       var prefix = "#"
+       var prefix = "!"
        if (message.content === prefix + "date") {
            var currentTime = new Date(),
                السنة = currentTime.getFullYear(),
@@ -1607,7 +1607,7 @@ client.on('message', message => {
 //كود الوقت
      client.on('message',async msg => {
           if(msg.channel.type === "dm") return;
-               var p = "#";
+               var p = "!";
        if(msg.author.bot) return;
        if(msg.content.startsWith(p + "فويس-ساعه")) {
        if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **لا تملك رتبه لذلك**');
@@ -1677,7 +1677,7 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-var prefix = "$";
+var prefix = "!";
        if(message.content === prefix + "cl") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -1708,7 +1708,7 @@ var prefix = "$";
 
 
 client.on('message', msg => {
- if (msg.content.startsWith('$send')) {
+ if (msg.content.startsWith('!send')) {
       let args = msg.content.split(' ').slice(1)
       if (!args[0]) return msg.reply(`**منشن الشخص اولا**`)
       if (!args[1]) return msg.reply(`**ما هي الرساله المطلوب ارسالها**`)
@@ -1725,7 +1725,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-    var p = "$";
+    var p = "!";
             if (message.content.startsWith(p + "cto")) {
                 if(!message.channel.guild) return;
                 if (!message.member.hasPermission("MANAGE_CHANNEL"))  return;
