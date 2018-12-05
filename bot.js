@@ -1798,40 +1798,20 @@ client.on('message', msg => {
   }
 });
 
-    const devs = ['515952323730735135'];
+    if(!Discord) var Discord = require('discord.js');
+if(!client) var client = new Discord.Client();
+if(!prefix) var prefix = "r-";
 
+const adminprefix = "r-";
+const devs = ['515952323730735135'];
 client.on('message', message => {
-    let argresult = message.content.split(` `).slice(1).join(' ');
-    if (message.content.startsWith(prefix + 'setStreaming')) {
-      if (!devs.includes(message.author.id)) return message.channel.send("<@515952323730735135> only this guy can do restart the bot so don't try again :wink:.");
-      message.delete();
-      client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
-
-    } else if(message.content.startsWith(prefix + 'sw')) {
-        client.user.setActivity(argresult,{type: 'WATCHING'});
-
-      } else if(message.content.startsWith(prefix + 'sl')) {
-        client.user.setActivity(argresult,{type: 'LISTENING'});
-
-      } else if(message.content.startsWith(prefix + 'sp')) {
-        client.user.setActivity(argresult,{type: 'PLAYING'});
-
-      } else if(message.content.startsWith(prefix + 'sn')) {
-        client.user.setUsername(argresult);
-
-      } else if(message.content.startsWith(prefix + 'sa')) {
-        client.user.setAvatar(argresult);
-
-
-      } else if(message.content.startsWith(prefix + 'ss')) {
-        if(!argresult) return message.channel.send('`online`, `DND(Do not Distrub),` `idle`, `invisible(Offline)` :notes: أختر أحد الحالات');
-        client.user.setStatus(argresult);
-
-
-    }
-
-  });
-
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+if (message.content.startsWith(adminprefix + 'st')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/idk")
+    message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(5000)})
+}
+});
 
 
 
