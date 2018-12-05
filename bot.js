@@ -388,7 +388,7 @@ client.on("message", message => {
 
 👑!ban 『لتعطي شخص باند』
 
-👑!kick 『لتعطي شخص كيك』
+👑!kick『لتعطي شخص كيك』
 
 👑!clear 『لمسح الشات برقم』
 
@@ -857,7 +857,7 @@ client.on('message',async message => {
 
        let args = message.content.split(" ").slice(1);
 
-       if (command == "كيك") {
+       if (command == "kick") {
                     if(!message.channel.guild) return message.reply('** This command only for servers**');
 
        if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**You Don't Have ` KICK_MEMBERS ` Permission**");
@@ -896,7 +896,7 @@ client.on('message',async message => {
 
        let args = message.content.split(" ").slice(1);
 
-       if (command == "بان") {
+       if (command == "ban") {
                     if(!message.channel.guild) return message.reply('** This command only for servers**');
 
        if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**You Don't Have ` BAN_MEMBERS ` Permission**");
