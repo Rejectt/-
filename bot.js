@@ -1275,7 +1275,7 @@ client.on('message', function(message) {
 client.on('message', message => {
     if(!message.channel.guild) return;
        if(message.content.startsWith(prefix + 'active')) {
-        let modlog = client.channels.find('name', 'الـــــــــشات_العام');
+        let modlog = client.channels.find('name', 'التفعيل');
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
        message.channel.sendMessage(`اضغط على الصح عشان تتفعل`).then(msg => {
 
