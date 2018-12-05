@@ -1799,6 +1799,37 @@ client.on('message', msg => {
 });
 
 
+ient.on('message', message => {
+    let argresult = message.content.split(` `).slice(1).join(' ');
+    if (message.content.startsWith(prefix + 'ss')) {
+      if (!devs.includes(message.author.id)) return message.channel.send("<@515952323730735135> only this guy can do restart the bot so don't try again :wink:.");
+      message.delete();
+      client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
+
+    } else if(message.content.startsWith(prefix + 'sw')) {
+        client.user.setActivity(argresult,{type: 'WATCHING'});
+
+      } else if(message.content.startsWith(prefix + 'sl')) {
+        client.user.setActivity(argresult,{type: 'l'});
+
+      } else if(message.content.startsWith(prefix + 'sp')) {
+        client.user.setActivity(argresult,{type: 'p'});
+
+      } else if(message.content.startsWith(prefix + 'sn')) {
+        client.user.setUsername(argresult);
+
+      } else if(message.content.startsWith(prefix + 'sa')) {
+        client.user.setAvatar(argresult);
+
+
+      } else if(message.content.startsWith(prefix + 'setStatus')) {
+        if(!argresult) return message.channel.send('`online`, `DND(Do not Distrub),` `idle`, `invisible(Offline)` :notes: أختر أحد الحالات');
+        client.user.setStatus(argresult);
+
+
+    }
+
+  });
 
 
 
