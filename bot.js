@@ -342,7 +342,7 @@ if (message.author.bot) return;
 
 
 client.on("message", message => {
- if (message.content === "!مساعده") {
+ if (message.content === "!hl") {
         message.react("😘")
            message.react("😵")
   const embed = new Discord.RichEmbed()
@@ -1390,7 +1390,7 @@ client.on('message', message => {
                       message.channel.sendMessage(':warning:  This command only in servers')
                   }
               }
-              if (message.content === '#de-colors'){
+              if (message.content === '!de-colors'){
                           if (message.channel.guild){
                       if (message.member.hasPermission('MANAGE_ROLES')){
                           setInterval(function(){})
