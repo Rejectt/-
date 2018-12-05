@@ -1,0 +1,26 @@
+{
+  "name": "Test",
+  "description": "Test",
+  "version": "0.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "anti-spam": "^0.2.7",
+    "ascii-data-table": "2.1.1",
+    "common-tags": "1.7.2",
+    "discord.js": "^11.3.2",
+    "figlet": "^1.2.1",
+    "fs": "0.0.2",
+    "giphy-api": "1.2.7",
+    "google-translate-api": "2.3.0",
+    "math-expression-evaluator": "1.2.17",
+    "mathjs": "^5.2.0",
+    "moment": "^2.22.2",
+    "ms": "^2.1.1",
+    "snekfetch": "^4.0.4",
+    "weather-js": "^2.0.0",
+    "ytdl-core": "^0.26.1"
+  }
+}
