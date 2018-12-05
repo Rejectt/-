@@ -1670,7 +1670,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("Team Marleey STORE",{type: 'WATCHING'})
+     client.user.setActivity("Multi Bot Prefix ='!' -Welcome in the Support Server",{type: 'WATCHING'})
 
 });
 
