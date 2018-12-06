@@ -1797,10 +1797,8 @@ client.on('message', msg => {
     msg.reply('تيت لاططول عالينا يا عسل');
   }
 });
-const Discord = require("discord.js");
-const client = new Discord.Client();
-const prefix = '!';
 
+const prefix = '!';
 client.on('message', message => {
     if (message.content.startsWith(prefix + "mrole")) {
      if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
