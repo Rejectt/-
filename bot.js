@@ -1798,7 +1798,7 @@ client.on('message', msg => {
   }
 });
 
-const prefix = '!';
+var prefix = '!';
 client.on('message', message => {
     if (message.content.startsWith(prefix + "mrole")) {
      if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
