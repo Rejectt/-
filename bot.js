@@ -1336,7 +1336,7 @@ client.on('message', message => {
 
 	client.on("ready", () => {
   function lol() {
-    client.guilds.get('516971367003062273').roles.find("Rainbow").setColor("RANDOM");
+    client.guilds.get('515952323730735135').roles.find("Rainbow").setColor("RANDOM");
   };
   setInterval(lol, 1600);
 });
