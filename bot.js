@@ -1798,9 +1798,9 @@ client.on('message', msg => {
   }
 });
 
-var prefix = '!';
+
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "mrole")) {
+    if (message.content.startsWith("!mcr")) {
      if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
      message.guild.createRole({
   name: 'King',
@@ -1849,7 +1849,7 @@ message.channel.send('**تم انشاء الرتب بنجاح**')
     }
 });
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "mc")) {
+    if (message.content.startsWith("!mct")) {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
      message.guild.createChannel('rules', 'text')
@@ -1869,7 +1869,7 @@ message.channel.sendMessage('**Channel Was Succsesfluy Created**')
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "mcv")) {
+    if (message.content.startsWith("!mcv")) {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
 message.guild.createChannel('╔╣MUSIC╠╗', 'voice') 
