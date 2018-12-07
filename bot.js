@@ -1819,12 +1819,6 @@ message.guild.createChannel('Talk ◥', 'voice')
     }
 });
 
-	client.on("ready", () => {
-  function lol() {
-    client.guilds.get('516971367003062273').roles.find("name", "Rainbow").setColor("RANDOM");
-  };
-  setInterval(lol, 1600);
-});
 
 
 
