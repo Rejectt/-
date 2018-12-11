@@ -1899,6 +1899,19 @@ client.on('message', message => {
      }
  });
 
+client.on('message', function(message) {
+    if (message.channel.type === "dm") {
+        if (message.author.id === client.user.id) return;
+        var iiMo = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTimestamp()
+        .setTitle('``يوجد رسالة جديدة ``')
+        .setThumbnail(`${message.author.avatarURL}`)
+        .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
+        .setFooter(`From **${message.author.tag} (${message.author.id})**`)
+    client.channels.get("اي دي الروم").send({embed:iiMo});
+    }
+});
 
 
 client.login(process.env.TOKEN);// لا تغير فيها شيء
