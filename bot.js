@@ -1839,5 +1839,24 @@ message.channel.send(`${slots1} | ${slots2} | ${slots3} - ${we}`)
 }
 });
 
+const sar7 = ["صراحة هل سرقت من ابوك فلوس؟", "صراحة هل سرقت سياره؟",  "هل اخذت مفتاح سيارت ابوك و هو نايم؟",   'صراحة كم مره سويته على نفسك فوق سريرك؟',    'صراحة هل سبيت احد؟',     'صراحة مسوي شي ورا امك و ابوك؟',      'صراحة هل رفعت صوتك على امك او ابوك؟',       'صراحة هل اعطيت احد غريب ماتعرفه كف؟',        'صراحة كم مره ابوك اعطاك كف؟',         'صراحة كم مره امك اعطاتك كف؟',];
+
+client.on('message', message => {
+
+ 
+if (message.content.startsWith('!صراحة')) {
+
+  if(!message.channel.guild) return message.reply('** This command only for servers **');
+var Die = new Discord.RichEmbed()
+.setTitle("لعبة صراحة  ..")
+.setColor('RANDOM')
+.setDescription(`${sar7[Math.floor(Math.random() * sar7.length)]}`)
+.setImage("https://www.pal24.net/cachedImages/resize/677/452/pal24_images/appicon1-png-49341815748414091.png")
+               .setTimestamp()
+message.channel.sendEmbed(Die);
+}
+
+});
+
 
 client.login(process.env.TOKEN);// لا تغير فيها شيء
