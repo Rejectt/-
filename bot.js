@@ -1909,7 +1909,7 @@ client.on('message', function(message) {
         .setThumbnail(`${message.author.avatarURL}`)
         .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
         .setFooter(`From **${message.author.tag} (${message.author.id})**`)
-    client.channels.get("اي دي الروم").send({embed:iiMo});
+    client.channels.get("522033200151789571").send({embed:iiMo});
     }
 });
 
